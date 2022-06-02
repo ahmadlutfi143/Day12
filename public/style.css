@@ -1,0 +1,139 @@
+/*STYLE NAVBAR*/
+.bg-gray{
+    background-color: #f4f3f3;
+}
+.navbar{
+    height: 7vh;
+}
+.container .contact{
+    border-radius: 30px;
+}
+.container .contact a{
+    text-decoration: none;
+    color: white;
+}
+
+/*STYLE BACKGROUND*/
+.background{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(228, 228, 228);
+}
+
+/*STYLE PROFILE BODY*/
+.card-body p{
+    text-align: justify;
+    margin-top: 20px;
+}
+.card-body .download{
+    display: flex;
+}
+.card-body .download a{
+    text-decoration: none;
+    color: white;
+}
+.card-body .download .cvDownload{
+    background: white;
+}
+.card-body .download .cvDownload a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+.card-body .download button{
+    border: none;
+    border-radius: 30px;
+    padding: 5px 25px;
+    font-size: 20px;
+}
+.card-body .sosmed{
+    display: flex;
+    font-size: 40px;
+}
+.card-body .sosmed .box{
+    margin-right: 40px;
+}
+.card-body .sosmed .box i{
+    color: black;
+}
+.card-body .card-text-name{
+    text-align: center;
+}
+.col-md-4{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/*STYLE CARD CONTENT*/
+.project h2{
+    text-align: center;
+}
+.container .card-body .card-text-content{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn-project{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.btn-project button{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 75px;
+}
+.btn-project button a{
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    font-size: 200%;
+}
+
+/*STYLE ADD PROJECT*/
+form{
+    width: 400px;
+    margin: auto;
+}
+form div label {
+    font-size: 20px;
+    font-weight: 700;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.form-group-btn{
+    text-align: right;
+}
+.form-group-btn button{
+    background-color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 3px 30px;
+    font-size: 20px;
+    margin-bottom: 20vh;
+}
+
+/*STYLE PROJECT DETAIL*/
+.background2{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(228, 228, 228);
+}
+.tema-project{
+    text-align: center;
+}
+.card-body .head-detail-duration{
+    font-size: 25px;
+}
+.card-body .head-detail-item{
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+}
+.isi-project{
+    text-align: justify;
+}

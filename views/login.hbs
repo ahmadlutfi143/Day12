@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Web - Contact Me</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-gray">
+        <div class="container">
+          <a class="navbar-brand me-5" href="/"><img src="../public/dw.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item me-4">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/project">Add Project</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              {{#if isLogin}}
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page">{{user.name}},</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
+              </li>
+              {{else}}
+              <li class="nav-item me-4">
+                <a class="nav-link active" aria-current="page" href="/register">Register</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link active" aria-current="page" href="/login"><strong>Login</strong></a>
+              </li>
+              {{/if}}
+            <div class="contact">
+                <button type="button" class="btn btn-dark" ><a href="/contact">Contact Me</a></button>
+            </div>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!--NAVBAR END-->
+
+     <!--LOGIN-->
+    <div class="background">
+    <div class="project">
+        <div>
+            <h2 class="title-project mb-5 pt-5"><strong>LOGIN TO YOUR ACCOUNT</strong></h2>
+        </div>
+        
+        <div class="container ">
+            <form action="/login" method='POST'>
+            {{#if messages.error}}
+            <div class="alert alert-danger" role="alert">
+            {{messages.error}}
+            </div>
+            {{/if}}
+            {{#if messages.warning}}
+            <div class="alert alert-warning" role="alert">
+            {{messages.warning}}
+            </div>
+            {{/if}}
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" class="form-control" id="loginEmail" name="loginEmail" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" name="loginPassword" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group-btn">
+                    <button type="submit" onclick="submitForm()" class="btn btn-primary">Submit</button>
+                  </div>
+                  
+              </form>
+        </div>
+    </div>
+    </div>
+    <!--LOGIN END-->
+
+</body>
+</html>
